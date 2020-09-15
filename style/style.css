@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    font-family: 'PT Sans', sans-serif;
+}
+ 
+
+/* ******** Tabs* ******* */
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#tabs{
+    border-top: 0.4px solid #DBDBDB;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-bottom: 4px solid #044FC8 !important;
+    color: #044FC8 !important;
+    fill: #044FC8 !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color:  #3E3E3E;
+    font-size: 14px;
+}
+
+.tab-content {
+    background: #EBF3FF;
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Tab ends here  */
+
+/* ************ Chart ************ */
+
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.my-chart {
+    width: 200px !important;
+    height: 200px !important;
+    margin: auto;
+}
+
+.line-chart {
+    height: 600px !important;
+}
+
+/* ************** Chart ends here ************ */
+
+.logo {
+    cursor: pointer;
+}
+.card-body h1 {
+    font-size: 48px;
+}
+
+.amt {
+    font-size: 30px !important;
+}
+
+.fas {
+    font-size: 30px;
+    background: #EBF3FF;
+    border-radius: 50px;
+    color: #23583C;
+}
+
+.fa-arrow-down {
+    color: #C20202;
+}
+
+.rate {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.25px;
+}
+
+.button {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.reg {
+    background: #044FC8;
+}
+
+.export {
+    background: #399365;
+    display: inline-table;
+}
+
+.reg:hover, .export:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+.input-group {
+    width: 35%;
+}
+
+.input-group-append {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.go-to-text {
+    background: #044FC8;
+    color: #fff;
+}
+
+.search-text {
+    background: #AFCDFD;
+}
+
+.fa-search {
+    color: #044FC8;
+    font-size: 16px;
+    background: #AFCDFD;
+}
+
+.card-img-top {
+    border-right: 20px solid #399365;
+}
+.yellow {
+    border-right: 20px solid #FFF627;
+}
+.car-type {
+    color: #044FC8;
+}
+
+.date {
+    font-size: 20px;
+}
+
+.opt, .fa-ellipsis-v {
+    font-size: 14px;
+}
+
+.view {
+    color:  #022F78;
+}
+
+.raise {
+    color:  #039900;
+}
+.raise:hover {
+    color:  #039900;
+}
+
+/* ****** Media query for small screen sizes ******* */
+
+@media (max-width: 767.98px) { 
+    .vehicle {
+        font-size: 17px;
+    }
+    .button {
+        font-size: 9px;
+    }
+    .input-div {
+        display: block !important;
+    }
+    .input-group {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .export {   
+        margin-bottom: 1rem;
+    }
+    
+}

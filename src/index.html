@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autociti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive viewport meta tag -->
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    
+    <!-- Tab  -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Google Font Product Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/chart.css">
+</head>
+<body>
+    <div class="container-xl wrapper">
+        <header class="pt-3">
+            <div class="row">
+                <div class="col-4 d-flex justify-content-start align-items-center">
+                    <img class="logo" src="/assets/images/logo.svg" alt="">
+                </div>
+                <div class="col-8 d-flex justify-content-end align-items-center">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                           <a href=""><img src="/assets/images/arrow.svg" alt="" class="img-fluid pr-3 pr-md-4"></a> 
+                            <img src="/assets/images/profile-img.svg" alt="" class="img-fluid px-2">
+                            <p class="mb-0"> Devon Lane </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Page Content -->
+        <main>
+            <!-- Tabs -->
+            <section id="tabs" class="mb-4">
+                <div class="container-xl p-0">
+                    <div class="row">
+                        <div class="col-12 p-0">
+                            <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link p-3 active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0V14H20V0H0ZM18 7H14V2H18V7ZM12 5H8V2H12V5ZM8 7H12V12H8V7ZM2 2H6V12H2V2ZM14 12V9H18V12H14Z" fill="#3E3E3E"/>
+                                        </svg> </span> Dashboard </a>
+                                    <a class="nav-item nav-link p-3" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><span><svg class="pr-1" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 13.5L0 16.44V8H3V13.5ZM8 11.66L6.43 10.32L5 11.64V4H8V11.66ZM13 10L10 13V0H13V10ZM15.81 9.81L14 8H19V13L17.21 11.21L10 18.36L6.53 15.34L2.75 19H0L6.47 12.66L10 15.64" fill="#3E3E3E"/>
+                                        </svg></span>Financial Report</a>
+                                    <a class="nav-item nav-link p-3" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><span><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 14H3V10H9V14ZM18 10V8L17 3H1L0 8V10H1V16H11V10H15V16H17V10H18ZM17 0H1V2H17V0Z" fill="#3E3E3E"/>
+                                        </svg></span> Inventory</a>
+                                    <a class="nav-item nav-link p-3" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false"><span><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 0H2C0.91 0.04 0.04 0.91 0 2V16C0.04 17.09 0.91 17.96 2 18H22C23.09 17.96 23.96 17.09 24 16V2C23.9816 1.47543 23.765 0.977343 23.3938 0.606185C23.0227 0.235027 22.5246 0.0184054 22 0ZM22 16H2V2H22V16ZM14 14V12.75C14 11.09 10.66 10.25 9 10.25C7.34 10.25 4 11.09 4 12.75V14H14ZM9 4C8.33696 4 7.70107 4.26339 7.23223 4.73223C6.76339 5.20107 6.5 5.83696 6.5 6.5C6.5 6.8283 6.56466 7.15339 6.6903 7.45671C6.81594 7.76002 7.00009 8.03562 7.23223 8.26777C7.70107 8.73661 8.33696 9 9 9C9.3283 9 9.65339 8.93534 9.95671 8.8097C10.26 8.68406 10.5356 8.49991 10.7678 8.26777C10.9999 8.03562 11.1841 7.76002 11.3097 7.45671C11.4353 7.15339 11.5 6.8283 11.5 6.5C11.5 6.1717 11.4353 5.84661 11.3097 5.54329C11.1841 5.23998 10.9999 4.96438 10.7678 4.73223C10.5356 4.50009 10.26 4.31594 9.95671 4.1903C9.65339 4.06466 9.3283 4 9 4ZM14 4V5H20V4H14ZM14 6V7H20V6H14ZM14 8V9H18V8H14Z" fill="#3E3E3E"/>
+                                        </svg> </span> Manage Job Card</a>
+                                    <a class="nav-item nav-link p-3" id="nav-vehicle-tab" data-toggle="tab" href="#nav-vehicle" role="tab" aria-controls="nav-vehicle" aria-selected="false"><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7362 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM10 2C12.1217 2 14.1566 2.84285 15.6569 4.34315C17.1571 5.84344 18 7.87827 18 10C18 12.4 17 14.5 15.3 16C13.9 14.7 12 14 10 14C8 14 6.2 14.7 4.7 16C3 14.5 2 12.4 2 10C2 7.87827 2.84285 5.84344 4.34315 4.34315C5.84344 2.84285 7.87827 2 10 2ZM12 3.89C11.62 3.9 11.26 4.15 11.1 4.54L9.81 7.77L9.71 8C9 8.13 8.41 8.6 8.14 9.26C7.73 10.29 8.23 11.45 9.26 11.86C10.29 12.27 11.45 11.77 11.86 10.74C12.12 10.08 12 9.32 11.57 8.76L11.67 8.5L12.96 5.29L12.97 5.26C13.17 4.75 12.92 4.17 12.41 3.96C12.28 3.91 12.15 3.89 12 3.89ZM8 4C7.73478 4 7.48043 4.10536 7.29289 4.29289C7.10536 4.48043 7 4.73478 7 5C7 5.26522 7.10536 5.51957 7.29289 5.70711C7.48043 5.89464 7.73478 6 8 6C8.26522 6 8.51957 5.89464 8.70711 5.70711C8.89464 5.51957 9 5.26522 9 5C9 4.73478 8.89464 4.48043 8.70711 4.29289C8.51957 4.10536 8.26522 4 8 4ZM5 7C4.73478 7 4.48043 7.10536 4.29289 7.29289C4.10536 7.48043 4 7.73478 4 8C4 8.26522 4.10536 8.51957 4.29289 8.70711C4.48043 8.89464 4.73478 9 5 9C5.26522 9 5.51957 8.89464 5.70711 8.70711C5.89464 8.51957 6 8.26522 6 8C6 7.73478 5.89464 7.48043 5.70711 7.29289C5.51957 7.10536 5.26522 7 5 7ZM15 7C14.7348 7 14.4804 7.10536 14.2929 7.29289C14.1054 7.48043 14 7.73478 14 8C14 8.26522 14.1054 8.51957 14.2929 8.70711C14.4804 8.89464 14.7348 9 15 9C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z" fill="#3E3E3E"/>
+                                        </svg> </span> Manage Vehicle</a>
+                                    <a class="nav-item nav-link p-3" id="nav-debtor-tab" data-toggle="tab" href="#nav-debtor" role="tab" aria-controls="nav-debtor" aria-selected="false"><span><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 0H6C4.9 0 4 0.9 4 2V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V6L14 0ZM18 18H6V2H13V7H18V18ZM2 4V22H18V24H2C0.9 24 0 23.1 0 22V4H2ZM8 10V12H16V10H8ZM8 14V16H13V14H8Z" fill="#3E3E3E"/>
+                                        </svg> </span> Debtors</a>
+                                    <a class="nav-item nav-link p-3" id="nav-more-tab" data-toggle="tab" href="#nav-more" role="tab" aria-controls="nav-more" aria-selected="false"><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C11.3132 0 12.6136 0.258658 13.8268 0.761205C15.0401 1.26375 16.1425 2.00035 17.0711 2.92893C17.9997 3.85752 18.7362 4.95991 19.2388 6.17317C19.7413 7.38642 20 8.68678 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C8.68678 20 7.38642 19.7413 6.17317 19.2388C4.95991 18.7362 3.85752 17.9997 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0ZM10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2ZM10 8.5C10.3978 8.5 10.7794 8.65804 11.0607 8.93934C11.342 9.22064 11.5 9.60218 11.5 10C11.5 10.3978 11.342 10.7794 11.0607 11.0607C10.7794 11.342 10.3978 11.5 10 11.5C9.60218 11.5 9.22064 11.342 8.93934 11.0607C8.65804 10.7794 8.5 10.3978 8.5 10C8.5 9.60218 8.65804 9.22064 8.93934 8.93934C9.22064 8.65804 9.60218 8.5 10 8.5ZM5.5 8.5C5.89782 8.5 6.27936 8.65804 6.56066 8.93934C6.84196 9.22064 7 9.60218 7 10C7 10.3978 6.84196 10.7794 6.56066 11.0607C6.27936 11.342 5.89782 11.5 5.5 11.5C5.10218 11.5 4.72064 11.342 4.43934 11.0607C4.15804 10.7794 4 10.3978 4 10C4 9.60218 4.15804 9.22064 4.43934 8.93934C4.72064 8.65804 5.10218 8.5 5.5 8.5ZM14.5 8.5C14.8978 8.5 15.2794 8.65804 15.5607 8.93934C15.842 9.22064 16 9.60218 16 10C16 10.3978 15.842 10.7794 15.5607 11.0607C15.2794 11.342 14.8978 11.5 14.5 11.5C14.1022 11.5 13.7206 11.342 13.4393 11.0607C13.158 10.7794 13 10.3978 13 10C13 9.60218 13.158 9.22064 13.4393 8.93934C13.7206 8.65804 14.1022 8.5 14.5 8.5Z" fill="#3E3E3E"/>
+                                        </svg> </span> More</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content h-100 py-5" id="nav-tabContent">
+                               
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Work Request</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="font-weight-bolder">24</h1>
+                                                          <i class="fas fa-arrow-up p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Increase Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Job Cards</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="font-weight-bolder">5</h1>
+                                                          <i class="fas fa-arrow-up p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Increase Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Total Users</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="font-weight-bolder">40</h1>
+                                                          <i class="fas fa-arrow-up p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Increase Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Total Users</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="font-weight-bolder">40</h1>
+                                                          <i class="fas fa-arrow-up p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Increase Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="text-center font-weight-bold my-3">Job Card</h5>
+                                                        <div class="container p-0">
+                                                            <!-- Chart  -->
+                                                            <canvas id="myChart" class="my-chart" width="200" height="200">
+                                                               
+                                                            </canvas>
+
+                                                            <!-- Chart ends here -->
+                                                            <div class="info mt-4">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/yellow.svg" alt=""></span> Workshop Manager </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="text-center font-weight-bold my-3">Inspection Schedules </h5>
+                                                        <div class="container p-0">
+                                                             <!-- Chart  -->
+                                                            <canvas id="myChart2" class="my-chart" width="200" height="200">
+                                                               
+                                                            </canvas>
+                                                             <!-- Chart ends here -->
+
+                                                            <div class="info mt-4">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/yellow.svg" alt=""></span> Workshop Manager </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="text-center font-weight-bold my-3"> User Breakdown</h5>
+                                                        <div class="container p-0">
+                                                             <!-- Chart  -->
+                                                            <canvas id="myChart3" class="my-chart" width="200" height="200">
+                                                               
+                                                            </canvas>
+                                                             <!-- Chart ends here  -->
+
+                                                            <div class="info mt-4">
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p class="small"><span><img class="img-fluid" src="/assets/images/yellow.svg" alt=""></span> Workshop Manager </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                   
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Total Payment</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="amt font-weight-bolder">₦202,948.00</h1>
+                                                          <i class="fas fa-arrow-down p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Decrease Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold"> Outstanding Payment </h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="amt font-weight-bolder">₦3,392.00</h1>
+                                                          <i class="fas fa-arrow-down p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Decrease Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-12 col-lg-4 mb-5">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                      <h5 class="font-weight-bold">Debtors</h5>
+                                                      <div class="inner-div my-4 d-flex justify-content-between align-items-center">
+                                                          <h1 class="amt font-weight-bolder">48</h1>
+                                                          <i class="fas fa-arrow-down p-3"></i>
+                                                      </div>
+                                                      <p class="rate">1.5% Decrease Today</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <h5 class="font-weight-bold m-3">Last Revenue </h5>
+                                                    <!-- Chart  -->
+                                                    <canvas id="myLineChart" class="line-chart" width="200" height="200"></canvas>
+                                                     <!-- Chart ends here  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <h5 class="font-weight-bold m-3"> Last 30 Day Spend (₦0.00)</h5>
+                                                     <!-- Chart  -->
+                                                    <canvas id="myLineChart2" class="line-chart" width="200" height="200"></canvas>
+                                                     <!-- Chart ends here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <h5 class="font-weight-bold m-3">Last 30 Day Spend (₦0.00)</h5>
+                                                     <!-- Chart  -->
+                                                    <canvas id="myLineChart3" class="line-chart" width="200" height="200"></canvas>
+                                                     <!-- Chart ends here  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                            
+                                    Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-vehicle" role="tabpanel" aria-labelledby="nav-vehicle-tab">
+                                    Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-debtor" role="tabpanel" aria-labelledby="nav-debtor-tab">
+                                    Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-more" role="tabpanel" aria-labelledby="nav-more-tab">
+                                    <div class="container">
+                                        <div class="card py-3 px-3 p-sm-4">
+                                            <div class="row mb-3">
+                                                <div class="col-6 d-flex align-items-center">
+                                                    <h5 class="vehicle font-weight-bold">Manage Vehicles</h5>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="" class="reg button float-right py-3 px-4 text-uppercase">Register Vehicle</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 input-div d-flex justify-content-end mb-3">
+                                                    <a href="" class="export button p-3"><span><img src="/assets/images/export.svg" alt=""> </span> EXPORT</a>
+                                                    <div class="input-group mb-3 mx-3">
+                                                        <input type="text" class="form-control py-4" placeholder="From" aria-label="From" aria-describedby="basic-addon2">
+                                                        <div class="input-group-append">
+                                                          <span class="go-to-text input-group-text button" id="basic-addon2">TO</span>
+                                                        </div>
+                                                        <input type="text" class="form-control py-4" placeholder="To" aria-label="From" aria-describedby="basic-addon2">
+                                                        <div class="from-to-append input-group-append">
+                                                          <span class="go-to-text input-group-text button" id="basic-addon2">GO</span>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control py-4" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                                                        <div class="input-group-append">
+                                                          <span class="search-text input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row my-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top yellow img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row my-4">
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+                                                <div class="card">
+                                                    <img class="card-img-top img-fluid" src="/assets/images/audi.svg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <div class="model d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="card-text car-type">Toyota</h4>
+                                                            <p class="card-text date font-weight-bold">2017</p>
+                                                        </div>
+                                                        <p> MMW 334 AAA </p>
+                                                        <div class="opt">
+                                                            <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
+                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex. -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ./Tabs -->
+        </main>
+    </div>
+
+<!-- Icons  -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- Chart  -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="/src/script.js"></script>
+</body>
+</html>
