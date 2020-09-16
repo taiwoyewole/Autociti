@@ -57,10 +57,7 @@ canvas {
     height: 200px !important;
     margin: auto;
 }
-.chart-container {
-    position: relative;
-    width: 80vw;
-}
+
 .line-chart {
     height: 600px !important;
 }
