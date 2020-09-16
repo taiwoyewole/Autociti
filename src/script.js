@@ -1,5 +1,5 @@
 var ctl = document.getElementById('myLineChart').getContext('2d');
-var chart2 = new Chart(ctl, {
+var chart = new Chart(ctl, {
     // The type of chart we want to create
     type: 'line',
 
@@ -18,7 +18,7 @@ var chart2 = new Chart(ctl, {
 });
 
 var ctl = document.getElementById('myLineChart2').getContext('2d');
-var chart2 = new Chart(ctl, {
+var chart = new Chart(ctl, {
     type: 'line',
 
     data: {
@@ -35,7 +35,7 @@ var chart2 = new Chart(ctl, {
 });
 
 var ctl = document.getElementById('myLineChart3').getContext('2d');
-var chart2 = new Chart(ctl, {
+var chart = new Chart(ctl, {
     type: 'line',
 
     data: {
@@ -99,7 +99,7 @@ var myDoughnutChart = new Chart(ctx, {
       ctx.font = fontSize + "em sans-serif";
       ctx.textBaseline = "middle";
   
-      var text = "45 Customers",
+      var text = "",
           textX = Math.round((width - ctx.measureText(text).width) / 2),
           textY = height / 2;
   
