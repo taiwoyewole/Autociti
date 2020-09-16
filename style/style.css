@@ -57,15 +57,22 @@ canvas {
     height: 200px !important;
     margin: auto;
 }
-
+.chart-container {
+    position: relative;
+    width: 80vw;
+}
 .line-chart {
     height: 600px !important;
 }
 
+.info {
+    width: fit-content;
+}
 /* ************** Chart ends here ************ */
 
 .logo {
     cursor: pointer;
+    width: 130px;
 }
 .card-body h1 {
     font-size: 48px;
@@ -122,6 +129,7 @@ input::placeholder {
 
 .input-group-append {
     border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
 }
 
 .go-to-text {
@@ -164,6 +172,10 @@ input::placeholder {
 .raise {
     color:  #039900;
 }
+.raise img {
+    width: 15px;
+}
+
 .raise:hover {
     color:  #039900;
 }
@@ -175,7 +187,8 @@ input::placeholder {
         font-size: 17px;
     }
     .button {
-        font-size: 9px;
+        font-size: 11px;
+        padding: 1rem !important;
     }
     .input-div {
         display: block !important;

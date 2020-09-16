@@ -14,6 +14,12 @@ var myDoughnutChart = new Chart(ctx, {
                 '#F2C94C',
                 '#9B51E0'
             ],
+            
+            seriesDefaults: {
+                type: "donut",
+                startAngle: 90,
+                holeSize: 180,
+            }
         }],
         
     },
@@ -25,12 +31,28 @@ var myDoughnutChart = new Chart(ctx, {
             display: false,
         }
     },
-    centerText: {
-        display: true,
-        text: "280"
-    }
 
 });
+
+  Chart.pluginService.register({
+    beforeDraw: function(chart) {
+      var width = chart.chart.width,
+          height = chart.chart.height,
+          ctx = chart.chart.ctx;
+  
+      ctx.restore();
+      var fontSize = (height / 220).toFixed(2);
+      ctx.font = fontSize + "em sans-serif";
+      ctx.textBaseline = "middle";
+  
+      var text = "45 Customers",
+          textX = Math.round((width - ctx.measureText(text).width) / 2),
+          textY = height / 2;
+  
+      ctx.fillText(text, textX, textY);
+      ctx.save();
+    }
+  });
 
 var ctx = document.getElementById('myChart2').getContext('2d');
 
@@ -91,13 +113,10 @@ var myDoughnutChart = new Chart(ctx, {
         legend: {
             display: false,
         }
-    },
-    centerText: {
-        display: true,
-        text: "280"
     }
 
 });
+
 var ctx = document.getElementById('myLineChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create

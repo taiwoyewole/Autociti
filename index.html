@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="container-xl wrapper">
-        <header class="pt-3">
+        <header class="">
             <div class="row">
                 <div class="col-4 d-flex justify-content-start align-items-center">
                     <img class="logo" src="/assets/images/logo.svg" alt="">
@@ -131,17 +131,18 @@
                                                         <h5 class="text-center font-weight-bold my-3">Job Card</h5>
                                                         <div class="container p-0">
                                                             <!-- Chart  -->
-                                                            <canvas id="myChart" class="my-chart" width="200" height="200">
-                                                               
-                                                            </canvas>
+                                                            <div class="chart-container">
+                                                                <canvas id="myChart" class="my-chart" width="200" height="200"></canvas>
+                                                             </div>
+                                                            
 
                                                             <!-- Chart ends here -->
-                                                            <div class="info mt-4">
+                                                            <div class="info mt-4 mx-auto">
                                                                 <div class="row">
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
                                                                     </div>
                                                                 </div>
@@ -149,7 +150,7 @@
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
                                                                     </div>
                                                                 </div>
@@ -170,17 +171,18 @@
                                                         <h5 class="text-center font-weight-bold my-3">Inspection Schedules </h5>
                                                         <div class="container p-0">
                                                              <!-- Chart  -->
-                                                            <canvas id="myChart2" class="my-chart" width="200" height="200">
-                                                               
-                                                            </canvas>
+                                                             <div class="chart-container">
+                                                                <canvas id="myChart2" class="my-chart" width="200" height="200"></canvas>
+                                                             </div>
+                                                            
                                                              <!-- Chart ends here -->
 
-                                                            <div class="info mt-4">
+                                                            <div class="info mt-4 mx-auto">
                                                                 <div class="row">
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
                                                                     </div>
                                                                 </div>
@@ -188,7 +190,7 @@
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
                                                                     </div>
                                                                 </div>
@@ -209,17 +211,18 @@
                                                         <h5 class="text-center font-weight-bold my-3"> User Breakdown</h5>
                                                         <div class="container p-0">
                                                              <!-- Chart  -->
-                                                            <canvas id="myChart3" class="my-chart" width="200" height="200">
-                                                               
-                                                            </canvas>
+                                                             <div class="chart-container">
+                                                                <canvas id="myChart3" class="my-chart" width="200" height="200"></canvas>
+                                                             </div>
+                                                            
                                                              <!-- Chart ends here  -->
 
-                                                            <div class="info mt-4">
+                                                            <div class="info mt-4 mx-auto">
                                                                 <div class="row">
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/red.svg" alt=""></span> Customers </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/green.svg" alt=""></span> Administrator </p>
                                                                     </div>
                                                                 </div>
@@ -227,7 +230,7 @@
                                                                     <div class="col-6">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/purple.svg" alt=""></span> Workshop Administrator  </p>
                                                                     </div>
-                                                                    <div class="col-6">
+                                                                    <div class="col-6 pr-0">
                                                                         <p class="small"><span><img class="img-fluid" src="/assets/images/orange.svg" alt=""></span> Finance </p>
                                                                     </div>
                                                                 </div>
@@ -290,7 +293,9 @@
                                                 <div class="card">
                                                     <h5 class="font-weight-bold m-3">Last Revenue </h5>
                                                     <!-- Chart  -->
-                                                    <canvas id="myLineChart" class="line-chart" width="200" height="200"></canvas>
+                                                    <div class="chart-container">
+                                                        <canvas id="myLineChart" class="line-chart" width="200" height="200"></canvas>
+                                                     </div>
                                                      <!-- Chart ends here  -->
                                                 </div>
                                             </div>
@@ -300,7 +305,10 @@
                                                 <div class="card">
                                                     <h5 class="font-weight-bold m-3"> Last 30 Day Spend (₦0.00)</h5>
                                                      <!-- Chart  -->
-                                                    <canvas id="myLineChart2" class="line-chart" width="200" height="200"></canvas>
+                                                     <div class="chart-container">
+                                                        <canvas id="myLineChart2" class="line-chart" width="200" height="200"></canvas>
+                                                     </div>
+                                                    
                                                      <!-- Chart ends here -->
                                                 </div>
                                             </div>
@@ -310,7 +318,9 @@
                                                 <div class="card">
                                                     <h5 class="font-weight-bold m-3">Last 30 Day Spend (₦0.00)</h5>
                                                      <!-- Chart  -->
-                                                    <canvas id="myLineChart3" class="line-chart" width="200" height="200"></canvas>
+                                                     <div class="chart-container">
+                                                        <canvas id="myLineChart3" class="line-chart" width="200" height="200"></canvas>
+                                                     </div>
                                                      <!-- Chart ends here  -->
                                                 </div>
                                             </div>
@@ -381,7 +391,7 @@
                                                         <p> MMW 334 AAA </p>
                                                         <div class="opt">
                                                             <a href="" class="view pr-2"> <i class="far fa-eye pr-1"></i>VIEW</a>
-                                                            <a href="" class="raise"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
+                                                            <a href="" class="raise pt-1"><img src="/assets/images/raise.svg" alt=""> RAISE</a>
                                                             <a href=""><i class="fas fa-ellipsis-v pt-1 float-right"></i></a>
                                                         </div>
                                                     </div>
@@ -532,6 +542,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <!-- Chart  -->
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/src/script.js"></script>
 </body>
