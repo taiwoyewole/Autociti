@@ -1,3 +1,57 @@
+var ctl = document.getElementById('myLineChart').getContext('2d');
+var chart2 = new Chart(ctl, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
+        datasets: [{
+            label: 'Revenue',
+            backgroundColor: '#AFCDFD',
+            borderColor: '#73A8FC',
+            data: [0, 12, 5, 30, 0, 0]
+        }]
+    },
+
+    options: {}
+});
+
+var ctl = document.getElementById('myLineChart2').getContext('2d');
+var chart2 = new Chart(ctl, {
+    type: 'line',
+
+    data: {
+        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
+        datasets: [{
+            label: 'Amount',
+            backgroundColor: '#AFCDFD',
+            borderColor: '#73A8FC',
+            data: [0, 12, 5, 30, 0, 0]
+        }]
+    },
+
+    options: {}
+});
+
+var ctl = document.getElementById('myLineChart3').getContext('2d');
+var chart2 = new Chart(ctl, {
+    type: 'line',
+
+    data: {
+        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
+        datasets: [{
+            label: 'Amount',
+            backgroundColor: '#AFCDFD',
+            borderColor: '#73A8FC',
+            data: [0, 12, 5, 30, 0, 0]
+        }]
+    },
+
+    options: {}
+});
+
+
 var ctx = document.getElementById('myChart').getContext('2d');
 
 var myDoughnutChart = new Chart(ctx, {
@@ -35,10 +89,10 @@ var myDoughnutChart = new Chart(ctx, {
 });
 
   Chart.pluginService.register({
-    beforeDraw: function(chart) {
-      var width = chart.chart.width,
-          height = chart.chart.height,
-          ctx = chart.chart.ctx;
+    beforeDraw: function(doughnutChart) {
+      var width = doughnutChart.chart.width,
+          height = doughnutChart.chart.height,
+          ctx = doughnutChart.chart.ctx;
   
       ctx.restore();
       var fontSize = (height / 220).toFixed(2);
@@ -80,13 +134,10 @@ var myDoughnutChart = new Chart(ctx, {
         legend: {
             display: false,
         }
-    },
-    centerText: {
-        display: true,
-        text: "280"
     }
 
 });
+
 var ctx = document.getElementById('myChart3').getContext('2d');
 
 var myDoughnutChart = new Chart(ctx, {
@@ -117,57 +168,5 @@ var myDoughnutChart = new Chart(ctx, {
 
 });
 
-var ctx = document.getElementById('myLineChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
 
-    // The data for our dataset
-    data: {
-        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
-        datasets: [{
-            label: 'Revenue',
-            backgroundColor: '#AFCDFD',
-            borderColor: '#73A8FC',
-            data: [0, 12, 5, 30, 0, 0]
-        }]
-    },
-
-    options: {}
-});
-
-var ctx = document.getElementById('myLineChart2').getContext('2d');
-var chart = new Chart(ctx, {
-    type: 'line',
-
-    data: {
-        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
-        datasets: [{
-            label: 'Amount',
-            backgroundColor: '#AFCDFD',
-            borderColor: '#73A8FC',
-            data: [0, 12, 5, 30, 0, 0]
-        }]
-    },
-
-    options: {}
-});
-
-var ctx = document.getElementById('myLineChart3').getContext('2d');
-var chart = new Chart(ctx, {
-    type: 'line',
-
-    data: {
-        labels: [' 1/28/20 ', '2/3/20 ', '2/3/20 ', '2/17/20', ' 2/24/20'],
-        datasets: [{
-            label: 'Amount',
-            backgroundColor: '#AFCDFD',
-            borderColor: '#73A8FC',
-            data: [0, 12, 5, 30, 0, 0]
-        }]
-    },
-
-    // Configuration options go here
-    options: {}
-});
 
