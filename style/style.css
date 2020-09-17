@@ -8,7 +8,14 @@ body {
     letter-spacing: 0.5px;
     font-family: 'PT Sans', sans-serif;
 }
- 
+
+.mobile, .mobile-content {
+    display: none;
+}
+
+header {
+    height: 80px;
+}
 
 /* ******** Tabs* ******* */
 
@@ -69,7 +76,6 @@ canvas {
 
 .logo {
     cursor: pointer;
-    width: 130px;
 }
 .card-body h1 {
     font-size: 48px;
@@ -180,6 +186,30 @@ input::placeholder {
 /* ****** Media query for small screen sizes ******* */
 
 @media (max-width: 767.98px) { 
+    .desktop {
+        display: none;
+    }
+    .mobile-content {
+        display: block;
+        background: #EBF3FF;
+        box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        height: 100%;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 22px;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
     .vehicle {
         font-size: 17px;
     }
@@ -197,5 +227,7 @@ input::placeholder {
     .export {   
         margin-bottom: 1rem;
     }
-    
+    /* header .row {
+        height: 80px;
+    } */
 }
